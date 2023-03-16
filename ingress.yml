@@ -1,0 +1,33 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: http-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /config-ui
+        pathType: Prefix
+        backend:
+          service:
+            name: config-ui
+            port:
+              number: 4000
+  - http:
+      paths:
+      - path: /devlake
+        pathType: Prefix
+        backend:
+          service:
+            name: devlake
+            port:
+              number: 8000
+  - http:
+      paths:
+      - path: /grafana
+        pathType: Prefix
+        backend:
+          service:
+            name: devlake
+            port:
+              number: 3002

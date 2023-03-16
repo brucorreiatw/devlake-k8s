@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devlake
+  labels:
+    app: devlake
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: devlake

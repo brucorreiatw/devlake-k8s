@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devlake
+  labels:
+    app: devlake
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devlake
+  template:
+    metadata:
+      labels:
+        app: devlake
+    spec:
+      containers:
+      - name: devlake
+        image: mericodev/devlake:latest
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - secretRef:
+              name: devlake
