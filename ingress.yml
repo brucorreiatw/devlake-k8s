@@ -29,7 +29,7 @@ spec:
   - host: grafana.devlake.test
     http:
       paths:
-      - path: /grafana/login
+      - path: /grafana
         pathType: Prefix
         backend:
           service:
