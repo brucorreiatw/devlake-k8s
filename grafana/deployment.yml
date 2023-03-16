@@ -18,7 +18,7 @@ spec:
       - name: grafana
         image: mericodev/devlake-dashboard:latest
         ports:
-        - containerPort: 3002
+        - containerPort: 3000
         envFrom:
           - secretRef:
               name: grafana

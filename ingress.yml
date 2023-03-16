@@ -21,7 +21,7 @@ spec:
           service:
             name: devlake
             port:
-              number: 8000
+              number: 8080
   - http:
       paths:
       - path: /grafana
